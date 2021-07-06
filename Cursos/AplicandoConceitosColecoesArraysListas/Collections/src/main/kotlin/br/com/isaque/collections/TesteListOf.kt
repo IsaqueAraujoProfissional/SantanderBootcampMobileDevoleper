@@ -1,8 +1,8 @@
 package br.com.isaque.collections
 
 fun main(){
-    val isaque = Funcionario("Isaque", 6500.0)
-    val luana = Funcionario("Luana", 2500.0)
+    val isaque = Funcionario("Isaque", 6500.0, "CLT")
+    val luana = Funcionario("Luana", 2500.0, "PJ")
 
     val funcionarios = listOf(isaque, luana)
 
@@ -12,13 +12,4 @@ fun main(){
 
     println("|----------------|")
     println(funcionarios.find { it.nome == "Isaque" })
-}
-
-data class Funcionario(
-    val nome: String,
-    val salario: Double
-){
-    override fun toString(): String {
-        return "nome: $nome \nsalário: $salario"
-    }
 }
